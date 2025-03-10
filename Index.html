@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <meta http-equiv="refresh" content="5;url=https://zefoy.com/">
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin: 50px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+        }
+        .loading {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>🔄 Please wait...</h2>
+        <p class="loading">Your link will open in <span id="countdown">5</span> seconds.</p>
+        <!-- Ad Network Code (Optional) -->
+        <div id="ad-container">
+            <!-- Example: Place AdSense, PropellerAds, or other ad scripts here -->
+            <!-- <script src="https://your-ad-network.com/ad.js"></script> -->
+        </div>
+    </div>
+
+    <script>
+        let countdown = 5;
+        const countdownElement = document.getElementById("countdown");
+
+        const interval = setInterval(() => {
+            countdown--;
+            countdownElement.textContent = countdown;
+            if (countdown === 0) {
+                clearInterval(interval);
+                window.location.href = "https://zefoy.com/";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
